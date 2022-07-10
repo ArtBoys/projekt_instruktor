@@ -36,7 +36,6 @@ Route::get('/add_instructor_view', [AdminController::class, 'addview']);
 
 Route::post('/upload_instructor', [AdminController::class, 'upload']);
 
-Route::post('/appointment', [HomeController::class, 'appointment']);
 
 Route::get('/showappointment', [AdminController::class, 'showappointment']);
 
@@ -45,10 +44,10 @@ Route::get('/zatwiedzony/{id}', [AdminController::class, 'zatwiedzony']);
 Route::get('/cancel/{id}', [AdminController::class, 'cancel']);
 
 
-Route::get('/showinstructor', [AdminController::class, 'instructor']);
+Route::get('/showinstructor', [AdminController::class, 'showinstructor']);
 
 
-Route::get('/deleteinstructor/{id}', [AdminController::class, 'instructor']);
+Route::get('/deleteinstructor/{id}', [AdminController::class, 'deleteinstructor']);
 ;
 Route::get('/udpateinstructor/{id}', [AdminController::class, 'udpateinstructor']);
 
@@ -57,3 +56,4 @@ Route::post('/edditinstructor/{id}', [AdminController::class, 'edditinstructor']
 
 
 
+Route::post('/appointment', [HomeController::class, 'appointment']);

@@ -38,7 +38,7 @@
                         <a class="nav-link" href="/about-us">O nas</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/doctors">Doktorzy</a>
+                        <a class="nav-link" href="/instructor">Instruktorzy</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Kontakt</a>
@@ -69,7 +69,6 @@
     </div> <!-- .banner-section -->
 </div> <!-- .page-banner -->
 
-{{--@include('doctors.show')--}}
 
 @include('instructors.items')
 

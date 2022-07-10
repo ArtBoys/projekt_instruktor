@@ -21,7 +21,7 @@
                     <tr style="background-color: black">
                         <th style="padding: 10px">Nazwa Klienta</th>
                         <th style="padding: 10px">Email</th>
-                        <th style="padding: 10px">Numer</th>
+                        <th style="padding: 10px">Numer Telefonu</th>
                         <th style="padding: 10px">Imie Instruktora</th>
                         <th style="padding: 10px">Data</th>
                         <th style="padding: 10px">Wiadomość</th>
@@ -36,8 +36,8 @@
                         <td style="padding: 1rem">{{$appoint->name}}</td>
                         <td style="padding: 1rem">{{$appoint->email}}</td>
                         <td style="padding: 1rem">{{$appoint->phone}}</td>
-                        <td style="padding: 1rem">{{$appoint->doctor}}</td>
-                        <td style="padding: 1rem">{{$appoint->date}}</td>
+                        <td style="padding: 1rem">{{$appoint->instructor}}</td>
+                        <td style="padding: 1rem">{{$appoint->data}}</td>
                         <td style="padding: 1rem">{{$appoint->message}}</td>
                         <td style="padding: 1rem">{{$appoint->status}}</td>
 

@@ -19,11 +19,9 @@
                         <p class="text-xl mb-0">{{$instructors->name}}</p>
                         <span class="text-sm text-grey">{{$instructors->category}}</span>
                     </div>
-                </div><
+                </div>
             </div>
-
             @endforeach
-
 
         </div>
     </div>

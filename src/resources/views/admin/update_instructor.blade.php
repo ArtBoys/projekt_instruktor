@@ -54,13 +54,13 @@
                         <input type="text" name="category" value="{{$data->category}}">
                     </div>
                     <div style="padding: 15px">
-                        <label for="">Numer pokoju</label>
-                        <input type="text" name="room" value="{{$data->place}}">
+                        <label for="">Miejsce</label>
+                        <input type="text" name="place" value="{{$data->place}}">
                     </div>
 
                     <div style="padding: 15px">
                         <label for="">Zdjecie</label>
-                        <img height="150" width="150" src="doctorimage/{{$data->image}}" alt="">
+                        <img height="150" width="150" src="instructorimage/{{$data->image}}" alt="">
                     </div>
 
                     <div style="padding: 15px">

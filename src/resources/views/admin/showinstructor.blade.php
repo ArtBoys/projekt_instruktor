@@ -22,18 +22,18 @@
                         <th style="padding: 10px">Miejsce</th>
                         <th style="padding: 10px">Zdjęcie</th>
                         <th style="padding: 10px">Usuń</th>
-                        <th style="padding: 10px">Przekaż plik</th>
+                        <th style="padding: 10px">Aktualizuj profil</th>
                     </tr>
 
                     @foreach($data as $instructor)
                     <tr align="center" style="background-color: skyblue">
-                        <td>{{$instructor->name}}</td>
-                        <td>{{$instructor->phone}}</td>
-                        <td>{{$instructor->category}}</td>
-                        <td>{{$instructor->place}}</td>
+                        <td style="padding: 0.5rem">{{$instructor->name}}</td>
+                        <td style="padding: 0.5rem">{{$instructor->phone}}</td>
+                        <td style="padding: 0.5rem">{{$instructor->category}}</td>
+                        <td style="padding: 0.5rem">{{$instructor->place}}</td>
                         <td><img height="100px" width="100px" src="instructorimage/{{$instructor->image}}" alt=""></td>
                         <td style="padding: 0.5rem"><a  onclick="return confirm('Czy Jestes pewnien że chcesz usunąć lekarza ?')" class="btn btn-danger" href="{{url('deleteinstructor', $instructor->id)}}">Usuń</a></td>
-                        <td style="padding: 0.5rem"><a  class="btn btn-primary" href="{{url('udpateinstructor', $instructor->id)}}">Dodaj</a></td>
+                        <td style="padding: 0.5rem"><a  class="btn btn-primary" href="{{url('udpateinstructor', $instructor->id)}}">Aktualizuj</a></td>
                     </tr>
                 @endforeach
 

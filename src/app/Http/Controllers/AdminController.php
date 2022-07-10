@@ -29,7 +29,7 @@ class AdminController extends Controller
 
         $instructor->name=$request->name;
 
-        $instructor->phone=$request->number;
+        $instructor->phone=$request->phone;
 
         $instructor->place=$request->place;
 
@@ -82,12 +82,7 @@ class AdminController extends Controller
         return view('admin.showinstructor', compact('data'));
     }
 
-    public function instructor() {
 
-        $data= instructor::all();
-
-        return view('admin.showinstructor', compact('data'));
-    }
 
 
     public function deleteinstructor($id) {
