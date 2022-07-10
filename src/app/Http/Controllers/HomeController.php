@@ -90,13 +90,7 @@ class HomeController extends Controller
 
         $data->save();
 
-        return redirect()->back()->with('message', 'Wizyta umówiona - Skonaktujemy się z Tobą wkrótce');
-
-
-
-
-
-
+        return redirect()->back()->with('message', 'Rezerwacja dokonana - Skonaktujemy się z Tobą wkrótce');
 
     }
 

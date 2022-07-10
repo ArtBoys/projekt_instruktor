@@ -32,7 +32,7 @@
                         <td style="padding: 0.5rem">{{$instructor->category}}</td>
                         <td style="padding: 0.5rem">{{$instructor->place}}</td>
                         <td><img height="100px" width="100px" src="instructorimage/{{$instructor->image}}" alt=""></td>
-                        <td style="padding: 0.5rem"><a  onclick="return confirm('Czy Jestes pewnien że chcesz usunąć lekarza ?')" class="btn btn-danger" href="{{url('deleteinstructor', $instructor->id)}}">Usuń</a></td>
+                        <td style="padding: 0.5rem"><a  onclick="return confirm('Czy Jestes pewnien że chcesz usunąć Instruktora ?')" class="btn btn-danger" href="{{url('deleteinstructor', $instructor->id)}}">Usuń</a></td>
                         <td style="padding: 0.5rem"><a  class="btn btn-primary" href="{{url('udpateinstructor', $instructor->id)}}">Aktualizuj</a></td>
                     </tr>
                 @endforeach

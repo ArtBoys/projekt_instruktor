@@ -44,21 +44,14 @@ class AdminController extends Controller
 
 
     public function  showappointment() {
-
         $data=appointment::all();
-
-
         return view('admin.showappointment', compact('data'));
     }
 
     public function zatwiedzony($id) {
-
         $data=appointment::find($id);
-
         $data->status='zatwiedzony';
-
         $data->save();
-
         return redirect()->back();
 
     }
@@ -66,11 +59,8 @@ class AdminController extends Controller
     public function cancel($id) {
 
         $data=appointment::find($id);
-
         $data->status='Anulowany';
-
         $data->save();
-
         return redirect()->back();
 
     }
@@ -78,12 +68,8 @@ class AdminController extends Controller
     public function showinstructor() {
 
         $data= instructor::all();
-
         return view('admin.showinstructor', compact('data'));
     }
-
-
-
 
     public function deleteinstructor($id) {
 

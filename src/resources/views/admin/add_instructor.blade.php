@@ -56,7 +56,7 @@
                         <option value="">--Wybierz--</option>
                         <option value="Kategoria A">Kategoria A</option>
                         <option value="Kategoria B">Kategoria B</option>
-                        <option value="Kategoria C">Kategoraia C</option>
+                        <option value="Kategoria C">Kategoria C</option>
                         <option value="Kategoria D">Kategoria D</option>
 
                     </select>

@@ -1,6 +1,6 @@
 <div class="page-section">
     <div class="container">
-        <h1 class="text-center wow fadeInUp">Umówić się na wizytę</h1>
+        <h1 class="text-center wow fadeInUp">Umów się na kurs prawajazdy</h1>
 
         <form class="main-form" action="{{url('appointment')}}" method="POST" >
 
