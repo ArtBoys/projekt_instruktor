@@ -36,11 +36,11 @@
                 </div>
             @endif
 
-            <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{url('upload_instructor')}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div style="padding: 15px">
-                    <label for="">Imie Doktora</label>
+                    <label for="">Imie Instruktora</label>
                     <input type="text" name="name" style="color: black" placeholder="Napisz imie" required>
                 </div>
 
@@ -50,25 +50,25 @@
                 </div>
 
                 <div style="padding: 15px">
-                    <label for="">Specializacja</label>
-                    <select name="speciality" id="" style="color: black; width: 200px" required>
+                    <label for="">Kategoria</label>
+                    <select name="category" id="" style="color: black; width: 200px" required>
 
                         <option value="">--Wybierz--</option>
-                        <option value="health">Zdrowie ogólne</option>
-                        <option value="heart">Kardiolog</option>
-                        <option value="eye">Okulista</option>
-                        <option value="skin">Alergolog</option>
+                        <option value="Kategoria A">Kategoria A</option>
+                        <option value="Kategoria B">Kategoria B</option>
+                        <option value="Kategoria C">Kategoraia C</option>
+                        <option value="Kategoria D">Kategoria D</option>
 
                     </select>
                 </div>
 
                 <div style="padding: 15px">
-                    <label for="">Numer pokoju</label>
-                    <input type="text" name="room" style="color: black" placeholder="Wpisz numer pokoju" required>
+                    <label for="">Miejsce</label>
+                    <input type="text" name="place" style="color: black" placeholder="Wpisz miejsce spotkania" required>
                 </div>
 
                 <div style="padding: 15px">
-                    <label for="">Zdjęcie doktora</label>
+                    <label for="">Zdjęcie Instruktora</label>
                     <input type="file" name="file" required>
                 </div>
 

@@ -28,12 +28,13 @@ Route::get('/dashboard', [CustomAuthController::class, 'dashboard'])->middleware
 Route::get('/logout', [CustomAuthController::class, 'logout']);
 
 Route::get('/about-us', [HomeController::class, 'aboutUs']);
-Route::get('/doctors', [HomeController::class, 'doctors']);
+Route::get('/instructors', [HomeController::class, 'instructors']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
-Route::get('/add_doctor_view', [AdminController::class, 'addview']);
 
-Route::post('/upload_doctor', [AdminController::class, 'upload']);
+Route::get('/add_instructor_view', [AdminController::class, 'addview']);
+
+Route::post('/upload_instructor', [AdminController::class, 'upload']);
 
 Route::post('/appointment', [HomeController::class, 'appointment']);
 
@@ -43,14 +44,15 @@ Route::get('/zatwiedzony/{id}', [AdminController::class, 'zatwiedzony']);
 
 Route::get('/cancel/{id}', [AdminController::class, 'cancel']);
 
-Route::get('/showdoctor', [AdminController::class, 'showdoctor']);
+
+Route::get('/showinstructor', [AdminController::class, 'instructor']);
 
 
-Route::get('/deletedoctor/{id}', [AdminController::class, 'deletedoctor']);
+Route::get('/deleteinstructor/{id}', [AdminController::class, 'instructor']);
+;
+Route::get('/udpateinstructor/{id}', [AdminController::class, 'udpateinstructor']);
 
-Route::get('/udpatedoctor/{id}', [AdminController::class, 'udpatedoctor']);
-
-Route::post('/edditdoctor/{id}', [AdminController::class, 'edditdoctor']);
+Route::post('/edditinstructor/{id}', [AdminController::class, 'edditinstructor']);
 
 
 

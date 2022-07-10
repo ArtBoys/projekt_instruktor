@@ -3,41 +3,46 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Doctor;
+use App\Models\Instructor;
 use App\Models\Appointment;
 
 class AdminController extends Controller
 {
+
+
     public function addview() {
 
-        return view('admin.add_doctor');
+        return view('admin.add_instructor');
     }
 
     public function upload(Request $request) {
 
-        $doctor=new doctor;
+        $instructor=new instructor;
 
         $image=$request->file;
 
         $imagename=time().'.'.$image->getClientoriginalExtension();
 
-        $request->file->move('doctorimage', $imagename);
+        $request->file->move('instructorimage', $imagename);
 
-        $doctor->image=$imagename;
+        $instructor->image=$imagename;
 
-        $doctor->name=$request->name;
+        $instructor->name=$request->name;
 
-        $doctor->phone=$request->number;
+        $instructor->phone=$request->number;
 
-        $doctor->room=$request->room;
+        $instructor->place=$request->place;
 
-        $doctor->speciality=$request->speciality;
+        $instructor->category=$request->category;
 
-        $doctor->save();
+        $instructor->save();
 
-        return redirect()->back()->with('message', 'Doktor dodany sukces');
+        return redirect()->back()->with('message', 'Instruktor dodany sukces');
 
     }
+
+
+
     public function  showappointment() {
 
         $data=appointment::all();
@@ -70,39 +75,48 @@ class AdminController extends Controller
 
     }
 
-    public function showdoctor() {
+    public function showinstructor() {
 
-        $data= doctor::all();
+        $data= instructor::all();
 
-        return view('admin.showdoctor', compact('data'));
+        return view('admin.showinstructor', compact('data'));
     }
 
-    public function deletedoctor($id) {
+    public function instructor() {
 
-        $data= doctor::find($id);
+        $data= instructor::all();
+
+        return view('admin.showinstructor', compact('data'));
+    }
+
+
+    public function deleteinstructor($id) {
+
+        $data= instructor::find($id);
         $data->delete();
         return redirect()->back();
-
-
     }
 
-    public function udpatedoctor($id) {
 
-        $data = doctor::find($id);
-        return view('admin.update_doctor', compact('data'));
+
+
+    public function udpateinstructor($id) {
+
+        $data = instructor::find($id);
+        return view('admin.update_instructor', compact('data'));
     }
 
-    public function edditdoctor(Request $request, $id) {
+    public function edditinstructor(Request $request, $id) {
 
-        $doctor = doctor::find($id);
+        $instructor = instructor::find($id);
 
-        $doctor->name=$request->name;
+        $instructor->name=$request->name;
 
-        $doctor->phone=$request->phone;
+        $instructor->phone=$request->phone;
 
-        $doctor->speciality=$request->speciality;
+        $instructor->category=$request->category;
 
-        $doctor->room=$request->room;
+        $instructor->place=$request->place;
 
         $image=$request->file;
 
@@ -111,15 +125,15 @@ class AdminController extends Controller
 
         $imagename=time().'.'.$image->getClientoriginalExtension();
 
-        $request->file->move('doctorimage', $imagename);
+        $request->file->move('instructor', $imagename);
 
-        $doctor->image=$imagename;
+            $instructor->image=$imagename;
 
         }
 
 
 
-        $doctor->save();
+        $instructor->save();
 
         return redirect()->back()->with('message', 'Profil zaaktualizowany');
 

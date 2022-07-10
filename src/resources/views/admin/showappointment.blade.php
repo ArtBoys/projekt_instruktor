@@ -19,10 +19,10 @@
             <div align="center" style="padding-top: 100px">
                 <table>
                     <tr style="background-color: black">
-                        <th style="padding: 10px">Nazwa Pacjenta</th>
+                        <th style="padding: 10px">Nazwa Klienta</th>
                         <th style="padding: 10px">Email</th>
                         <th style="padding: 10px">Numer</th>
-                        <th style="padding: 10px">Imie Doktora</th>
+                        <th style="padding: 10px">Imie Instruktora</th>
                         <th style="padding: 10px">Data</th>
                         <th style="padding: 10px">Wiadomość</th>
                         <th style="padding: 10px">Status</th>

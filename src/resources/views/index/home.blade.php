@@ -35,7 +35,7 @@
                         <a class="nav-link" href="/about-us">O nas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/doctors">Doktorzy</a>
+                        <a class="nav-link" href="/doctors">Instuktorzy</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Kontakt</a>
@@ -125,7 +125,7 @@
     </div> <!-- .bg-light -->
 </div> <!-- .bg-light -->
 
-@include('doctors.items')
+@include('instructors.items')
 
 
 

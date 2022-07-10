@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use App\Models\Doctor;
+use App\Models\Instructor;
 use App\Models\Appointment;
 
 class HomeController extends Controller
@@ -16,8 +16,8 @@ class HomeController extends Controller
         {
             if(Auth::user()->usertype=='0')
             {
-                $doctor = doctor::all();
-                return view('dashboard', compact('doctor'));
+                $instructor = instructor::all();
+                return view('dashboard', compact('instructor'));
             }
             else
             {
@@ -38,8 +38,8 @@ class HomeController extends Controller
         }
         else {
 
-            $doctor = doctor::all();
-            return view('index.home', compact('doctor'));
+            $instructor = instructor::all();
+            return view('index.home', compact('instructor'));
         }
 
 
@@ -47,12 +47,12 @@ class HomeController extends Controller
 
 
     public function aboutUs() {
-        $doctor = doctor::all();
-        return view('about.home', compact('doctor'));
+        $instructor = instructor::all();
+        return view('about.home', compact('instructor'));
     }
-    public function doctors() {
-        $doctor = doctor::all();
-        return view('doctors.home', compact('doctor'));
+    public function instructors() {
+        $instructor = instructor::all();
+        return view('instructors.home', compact('instructor'));
     }
     public function contact() {
         return view('contact.home');
@@ -80,7 +80,7 @@ class HomeController extends Controller
 
         $data->message=$request->message;
 
-        $data->doctor=$request->doctor;
+        $data->instructor=$request->instructor;
 
         $data->status='Przetwarza';
 

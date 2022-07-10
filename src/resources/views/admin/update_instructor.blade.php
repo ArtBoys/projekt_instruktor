@@ -36,7 +36,7 @@
                     </div>
                 @endif
 
-                <form action="{{url('edditdoctor', $data->id)}}"  method="POST" enctype="multipart/form-data">
+                <form action="{{url('edditinstructor', $data->id)}}"  method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div style="padding: 15px">
@@ -50,12 +50,12 @@
                     </div>
 
                     <div style="padding: 15px">
-                        <label for="">Specializacja</label>
-                        <input type="text" name="speciality" value="{{$data->speciality}}">
+                        <label for="">Kategoria</label>
+                        <input type="text" name="category" value="{{$data->category}}">
                     </div>
                     <div style="padding: 15px">
                         <label for="">Numer pokoju</label>
-                        <input type="text" name="room" value="{{$data->room}}">
+                        <input type="text" name="room" value="{{$data->place}}">
                     </div>
 
                     <div style="padding: 15px">
